@@ -1,0 +1,35 @@
+.portfolio-container {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.portfolio-container.loaded {
+  opacity: 1;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff5252, #26d0ce);
+}

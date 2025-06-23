@@ -1,0 +1,382 @@
+/* Import a clean, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #4ecdc4;
+  --secondary: #22223b;
+  --bg: linear-gradient(135deg, #16213e 0%, #0f3460 50%, #1a1a2e 100%);
+  --text: #f8f8f8;
+  --muted: #b2becd;
+  --radius: 18px;
+  --shadow: 0 4px 24px rgba(30, 30, 46, 0.12);
+  --max-width: 900px;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.experience {
+  background: var(--bg);
+  padding: 60px 0 40px 0;
+}
+
+.experience-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+ 
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.4em;
+  letter-spacing: 0.01em;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 2.2em;
+  font-weight: 400;
+}
+
+.experience-timeline {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.experience-card {
+  background: var(--secondary);
+  border-radius: var(--radius);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+  margin-bottom: 36px;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(32px);
+  animation: slideInUp 0.7s forwards;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+}
+
+.experience-content.visible .experience-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--bg);
+  margin-top: 38px;
+  margin-right: 18px;
+  flex-shrink: 0;
+}
+
+.card-content {
+  flex: 1;
+  padding: 28px 24px 22px 0;
+  background: transparent;
+}
+
+.card-header {
+  margin-bottom: 1.1em;
+}
+
+.job-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 0.2em 0;
+}
+
+.company-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+  align-items: center;
+  margin-bottom: 0.2em;
+}
+
+.company-name {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.duration {
+  color: var(--primary);
+  background: rgba(78, 205, 196, 0.08);
+  border-radius: 12px;
+  padding: 2px 12px;
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+
+.location {
+  color: var(--muted);
+  font-size: 0.93rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 0.2em;
+}
+
+.card-body {
+  margin-top: 0.6em;
+}
+
+.job-description {
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin-bottom: 1.1em;
+  font-weight: 400;
+}
+
+.experience-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0.8em 0 1.2em 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(78, 205, 196, 0.10);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.experience-image-container:hover {
+  box-shadow: 0 4px 24px rgba(78, 205, 196, 0.18);
+}
+
+.experience-image {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: linear-gradient(0deg, rgba(30, 30, 46, 0.88) 80%, rgba(30, 30, 46, 0));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.image-overlay span {
+  color: #fff;
+  font-size: 0.97rem;
+  padding-bottom: 7px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.achievements {
+  margin-bottom: 1em;
+}
+
+.achievements h5 {
+  font-size: 1.01rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.5em 0;
+}
+
+.achievements ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.achievements li {
+  color: var(--text);
+  font-size: 0.97rem;
+  margin-bottom: 0.4em;
+  position: relative;
+  padding-left: 1.2em;
+}
+
+.achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.technologies h5 {
+  font-size: 1.01rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.5em 0;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.tech-tag {
+  background: rgba(78, 205, 196, 0.10);
+  color: var(--primary);
+  padding: 0.28em 0.9em;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  border: 1px solid rgba(78, 205, 196, 0.16);
+  margin-bottom: 0.3em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tech-tag:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .experience-card {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .timeline-dot {
+    margin: 20px auto 0 auto;
+  }
+
+  .card-content {
+    padding: 18px 10px 16px 10px;
+  }
+
+  .experience-image-container {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .experience-image {
+    height: 140px;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-title {
+    font-size: 1.35rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .card-content {
+    padding: 12px 2px 10px 2px;
+  }
+
+  .experience-image {
+    height: 110px;
+  }
+
+  .job-title {
+    font-size: 1.01rem;
+  }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 30, 46, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  position: relative;
+  background: var(--secondary);
+  padding: 1.2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image {
+  max-width: 80vw;
+  max-height: 75vh;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(78, 205, 196, 0.18);
+}
+
+.modal-close {
+  position: absolute;
+  top: 7px;
+  right: 14px;
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 1;
+  transition: background 0.2s;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: #44a08d;
+}
