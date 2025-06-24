@@ -77,10 +77,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
       <div className="scroll-indicator">
         <div className="scroll-line"></div>
-        <span>Scroll Down</span>
+        <span style={{ cursor: "pointer" }}>
+          <a href="#contact">Scroll Down</a>
+        </span>
       </div>
     </section>
   );

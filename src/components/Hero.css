@@ -230,8 +230,8 @@
 }
 
 .profile-image {
-  width: 500px;
-  height: 500px;
+  /* width: 500px;
+  height: 500px; */
   border-radius: 20%;
   background: transparent;
   padding: 4px;
@@ -271,6 +271,7 @@
 .skill-badges {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 10vh;
   gap: 1rem;
   justify-content: center;
 }
@@ -377,7 +378,7 @@
   flex-direction: column;
  }
   .profile-image {
-    width: 350px;
+    width: 400px;
     height: 350px;
   }
 
@@ -421,7 +422,7 @@
   }
 
   .profile-image {
-    width: 200px;
+    width: 220px;
     height: 200px;
   }
 
@@ -454,7 +455,7 @@
   }
 
   .profile-image {
-    width: 180px;
+    width: 200px;
     height: 180px;
   }
 
