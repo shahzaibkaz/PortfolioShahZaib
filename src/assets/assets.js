@@ -5,6 +5,7 @@ import groceries from "./GroceriesThumbnail.png";
 import portfolio from "./PortfolioThumbnail.png";
 import cv from "./ATS_ShahZaibCV.pdf";
 import intern from "./certificate.jpg";
+import mern from "./Mern.jpg";
 
 export const assets = {
   profile,
@@ -14,4 +15,5 @@ export const assets = {
   portfolio,
   cv,
   intern,
+  mern
 };
