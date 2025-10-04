@@ -19,6 +19,22 @@ const Experience = () => {
       image: assets.intern,
       achievements: ["Gained Experience by creating real time projects"],
     },
+    {
+      title: "Mern Stack Certification",
+      company: "Coursera",
+      duration: "October 04,2025",
+      location: "Khushab , Pakistan",
+      description: `Thrilled to share that I’ve successfully completed the MERN Stack Front To Back: Full Stack React, Redux & Node.js specialization by Packt on Coursera!
+                    This journey helped me master MongoDB, Express, React, and Node.js — building robust backend APIs, managing state with Redux, and creating dynamic, production-ready full-stack applications.
+                    Excited to keep growing and applying these skills to real-world projects in full-stack development.`,
+      technologies: ["MongoDB", "Express js", "React js", "Node js"],
+      image: assets.mern,
+      achievements: [
+        " Backend Development and API Creation",
+        " Frontend Development with React",
+        " Advanced Frontend Development and Deployment",
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -39,7 +55,9 @@ const Experience = () => {
     <section id="experience" className="experience" ref={experienceRef}>
       <div className="experience-container">
         <div className={`experience-content ${isVisible ? "visible" : ""}`}>
-          <h2 className="section-title">Professional Experience</h2>
+          <h2 className="section-title">
+            Professional Experience and Certifications
+          </h2>
           <p className="section-subtitle">My journey in software development</p>
 
           <div className="experience-timeline">
